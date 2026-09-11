@@ -219,7 +219,7 @@ function initQRModal() {
   // Determine URL to encode (fallback to github pages link pattern if local)
   let currentShareUrl = window.location.href;
   if (currentShareUrl.startsWith('file://')) {
-    currentShareUrl = "https://simrikakhatri.github.io/portfolio";
+    currentShareUrl = "https://smediamanagement84-star.github.io/simrika-khatri-portfolio/";
   }
 
   if (qrUrlInput) {
