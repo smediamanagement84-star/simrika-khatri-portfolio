@@ -69,7 +69,7 @@ const PORTFOLIO_DATA = {
     { number: "100%", label: "Professional Dedication" }
   ],
 
-  // 3 Curated Gallery Categories (7 photos per section)
+  // 3 Curated Gallery Categories (8 real photos per section)
   galleries: {
     portraits: {
       id: "portraits",
@@ -78,59 +78,67 @@ const PORTFOLIO_DATA = {
       items: [
         {
           id: "p1",
-          title: "Golden Hour Glow",
-          tag: "Natural Light / Portrait",
-          src: "assets/images/portraits/portrait_1.svg",
-          alt: "Simrika Khatri - Golden Hour Portrait",
+          title: "Rose Gold Sequin & Crimson Velvet",
+          tag: "Editorial & Glamour",
+          src: "assets/images/portraits/portrait_1.jpg",
+          alt: "Simrika Khatri in Rose Gold Sequin Gown",
           aspect: "portrait"
         },
         {
           id: "p2",
-          title: "Minimalist Studio Digital",
-          tag: "Agency Digitals",
-          src: "assets/images/portraits/portrait_2.svg",
-          alt: "Simrika Khatri - Studio Clean Look",
-          aspect: "tall"
+          title: "Scarlet Breeze on Hillside",
+          tag: "Scenic Outdoor Portrait",
+          src: "assets/images/portraits/portrait_2.jpg",
+          alt: "Simrika Khatri in Crimson Red Dress",
+          aspect: "portrait"
         },
         {
           id: "p3",
-          title: "High Fashion Monochrome",
-          tag: "Black & White Editorial",
-          src: "assets/images/portraits/portrait_3.svg",
-          alt: "Simrika Khatri - Black and White Fashion",
+          title: "Radiance & Glow Beauty Campaign",
+          tag: "Commercial Skincare Shoot",
+          src: "assets/images/portraits/portrait_3.jpg",
+          alt: "Simrika Khatri Skincare Commercial Campaign",
           aspect: "portrait"
         },
         {
           id: "p4",
-          title: "Urban Chic & Street Style",
-          tag: "Commercial & Casual",
-          src: "assets/images/portraits/portrait_4.svg",
-          alt: "Simrika Khatri - Casual Street Style",
-          aspect: "square"
+          title: "Summer Resort & Poolside Chic",
+          tag: "Commercial Brand Look",
+          src: "assets/images/portraits/portrait_4.jpg",
+          alt: "Simrika Khatri Poolside Commercial Campaign",
+          aspect: "portrait"
         },
         {
           id: "p5",
-          title: "Elegance in Red",
-          tag: "Editorial Showcase",
-          src: "assets/images/portraits/portrait_5.svg",
-          alt: "Simrika Khatri - Crimson Editorial",
+          title: "Lilac Heritage Embroidered Lehenga",
+          tag: "Traditional Couture",
+          src: "assets/images/portraits/portrait_5.jpg",
+          alt: "Simrika Khatri in Lilac Lehenga",
           aspect: "portrait"
         },
         {
           id: "p6",
-          title: "Beauty & Close-up Glow",
-          tag: "Beauty & Skin",
-          src: "assets/images/portraits/portrait_6.svg",
-          alt: "Simrika Khatri - Beauty Close-up",
-          aspect: "square"
+          title: "Cobalt Modern Silhouette",
+          tag: "Contemporary Fashion",
+          src: "assets/images/portraits/portrait_6.jpg",
+          alt: "Simrika Khatri in Royal Blue Dress",
+          aspect: "tall"
         },
         {
           id: "p7",
-          title: "Sunset Silhouette & Mood",
-          tag: "Outdoor Aesthetic",
-          src: "assets/images/portraits/portrait_7.svg",
-          alt: "Simrika Khatri - Silhouette Art",
-          aspect: "tall"
+          title: "Boutique Casual Chic",
+          tag: "Lifestyle & Street Style",
+          src: "assets/images/portraits/portrait_7.jpg",
+          alt: "Simrika Khatri Casual Chic Street Look",
+          aspect: "portrait"
+        },
+        {
+          id: "p8",
+          title: "Glamour Spotlight Elegance",
+          tag: "Evening Glamour",
+          src: "assets/images/portraits/portrait_8.jpg",
+          alt: "Simrika Khatri Evening Gown Portrait",
+          aspect: "portrait"
         }
       ]
     },
@@ -142,59 +150,67 @@ const PORTFOLIO_DATA = {
       items: [
         {
           id: "r1",
-          title: "Pageant Winner Crown Moment",
+          title: "Miss Glam Gala Crowning Glory",
           tag: "Pageant Titleholder",
-          src: "assets/images/runway/runway_1.svg",
-          alt: "Simrika Khatri - Pageant Crowning Moment",
-          aspect: "tall"
-        },
-        {
-          id: "r2",
-          title: "Grand Finale Runway Walk",
-          tag: "Fashion Week Runway",
-          src: "assets/images/runway/runway_2.svg",
-          alt: "Simrika Khatri - Grand Finale Walk",
+          src: "assets/images/runway/runway_1.jpg",
+          alt: "Simrika Khatri Crowned Pageant Winner",
           aspect: "portrait"
         },
         {
-          id: "r3",
-          title: "National Expo Stage Showcase",
-          tag: "Expo Model Showcase",
-          src: "assets/images/runway/runway_3.svg",
-          alt: "Simrika Khatri - Expo Presentation",
-          aspect: "square"
-        },
-        {
-          id: "r4",
-          title: "Haute Couture Evening Gown",
-          tag: "Designer Collection",
-          src: "assets/images/runway/runway_4.svg",
-          alt: "Simrika Khatri - Couture Gown",
+          id: "r2",
+          title: "Olive Cape Couture Ramp Walk",
+          tag: "Fashion Week Ramp",
+          src: "assets/images/runway/runway_2.jpg",
+          alt: "Simrika Khatri Ramp Walk Finale",
           aspect: "tall"
         },
         {
+          id: "r3",
+          title: "Starlight Silver Evening Couture",
+          tag: "Designer Gown Showcase",
+          src: "assets/images/runway/runway_3.jpg",
+          alt: "Simrika Khatri in Silver Gown",
+          aspect: "tall"
+        },
+        {
+          id: "r4",
+          title: "Cultural Majesty Ethnic Fusion",
+          tag: "Heritage Ramp Showcase",
+          src: "assets/images/runway/runway_4.jpg",
+          alt: "Simrika Khatri Cultural Fusion Runway",
+          aspect: "portrait"
+        },
+        {
           id: "r5",
-          title: "Traditional Fusion Runway",
-          tag: "Cultural & Ethnic Runway",
-          src: "assets/images/runway/runway_5.svg",
-          alt: "Simrika Khatri - Ethnic Runway",
+          title: "Royal Pageant Titleholder Seat",
+          tag: "Crowned Winner Portrait",
+          src: "assets/images/runway/runway_5.jpg",
+          alt: "Simrika Khatri Crowned Queen in Fuchsia",
           aspect: "portrait"
         },
         {
           id: "r6",
-          title: "Press & Media Backstage",
-          tag: "Behind The Scenes",
-          src: "assets/images/runway/runway_6.svg",
-          alt: "Simrika Khatri - Backstage Runway",
-          aspect: "square"
+          title: "Glamour Runway Models Showcase",
+          tag: "Designer Runway Lineup",
+          src: "assets/images/runway/runway_6.jpg",
+          alt: "Simrika Khatri Runway Stage Finale",
+          aspect: "landscape"
         },
         {
           id: "r7",
-          title: "Trophy & Sash Presentation",
-          tag: "Awards & Recognition",
-          src: "assets/images/runway/runway_7.svg",
-          alt: "Simrika Khatri - Award Ceremony",
+          title: "Fuchsia Heritage Pageant Tiara",
+          tag: "Official Titleholder Look",
+          src: "assets/images/runway/runway_7.jpg",
+          alt: "Simrika Khatri with Pageant Crown",
           aspect: "portrait"
+        },
+        {
+          id: "r8",
+          title: "High-Energy Runway Cadence",
+          tag: "Ramp Walk Dynamics",
+          src: "assets/images/runway/runway_8.jpg",
+          alt: "Simrika Khatri Runway Walk",
+          aspect: "tall"
         }
       ]
     },
@@ -206,59 +222,67 @@ const PORTFOLIO_DATA = {
       items: [
         {
           id: "h1",
-          title: "Grand Stage Emcee & Host",
-          tag: "Live Event Hosting",
-          src: "assets/images/hosting/hosting_1.svg",
-          alt: "Simrika Khatri - Live Stage Hosting",
+          title: "Live Podium Emcee & Keynote Host",
+          tag: "Stage Presenter",
+          src: "assets/images/hosting/hosting_1.jpg",
+          alt: "Simrika Khatri Emceeing at Podium",
           aspect: "portrait"
         },
         {
           id: "h2",
-          title: "Official Jury & Judging Panel",
-          tag: "Pageant Judge",
-          src: "assets/images/hosting/hosting_2.svg",
-          alt: "Simrika Khatri - Judging Pageant Contestants",
-          aspect: "square"
+          title: "Official Jury & Evaluation Judge",
+          tag: "Pageant Jury Panel",
+          src: "assets/images/hosting/hosting_2.jpg",
+          alt: "Simrika Khatri Pageant Judge",
+          aspect: "portrait"
         },
         {
           id: "h3",
-          title: "Choreography & Stage Direction",
-          tag: "Choreography Session",
-          src: "assets/images/hosting/hosting_3.svg",
-          alt: "Simrika Khatri - Directing Runway Walkers",
-          aspect: "tall"
+          title: "'Who Is The Next Icon' Contestant Jury",
+          tag: "Audition Screening",
+          src: "assets/images/hosting/hosting_3.jpg",
+          alt: "Simrika Khatri Judging Audition Contestants",
+          aspect: "landscape"
         },
         {
           id: "h4",
-          title: "Pageant Grooming & Mentorship Workshop",
-          tag: "Contestant Training",
-          src: "assets/images/hosting/hosting_4.svg",
-          alt: "Simrika Khatri - Grooming Workshop",
-          aspect: "portrait"
+          title: "Head Choreographer Ramp Curtain Call",
+          tag: "Runway Choreography Direction",
+          src: "assets/images/hosting/hosting_4.jpg",
+          alt: "Simrika Khatri Choreographer Bow on Stage",
+          aspect: "tall"
         },
         {
           id: "h5",
-          title: "Awards Night Red Carpet Host",
-          tag: "Red Carpet Host",
-          src: "assets/images/hosting/hosting_5.svg",
-          alt: "Simrika Khatri - Red Carpet Host",
-          aspect: "square"
+          title: "Grand Finale Celebratory Stage Host",
+          tag: "Live Show Finale",
+          src: "assets/images/hosting/hosting_5.jpg",
+          alt: "Simrika Khatri Stage Co-Host Celebration",
+          aspect: "landscape"
         },
         {
           id: "h6",
-          title: "Panel Discussion & Keynote",
-          tag: "Youth & Creative Speaker",
-          src: "assets/images/hosting/hosting_6.svg",
-          alt: "Simrika Khatri - Panel Speaker",
-          aspect: "portrait"
+          title: "International Academy Mentorship Panel",
+          tag: "Grooming & Training Workshop",
+          src: "assets/images/hosting/hosting_6.jpg",
+          alt: "Simrika Khatri Mentorship Workshop",
+          aspect: "landscape"
         },
         {
           id: "h7",
-          title: "Celebration & Mentorship Finale",
-          tag: "Choreographer Curtain Call",
-          src: "assets/images/hosting/hosting_7.svg",
-          alt: "Simrika Khatri - Curtain Call Finale",
-          aspect: "tall"
+          title: "Pageant Jury Executive Deliberation",
+          tag: "Jury Table Panel",
+          src: "assets/images/hosting/hosting_7.jpg",
+          alt: "Simrika Khatri at Judging Table",
+          aspect: "landscape"
+        },
+        {
+          id: "h8",
+          title: "Brand Ambassador & Event Presentation",
+          tag: "Brand Emcee & Presenter",
+          src: "assets/images/hosting/hosting_8.jpg",
+          alt: "Simrika Khatri Brand Ambassador Presentation",
+          aspect: "portrait"
         }
       ]
     }
