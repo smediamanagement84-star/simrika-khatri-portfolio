@@ -91,7 +91,7 @@ function initGalleries() {
       card.dataset.index = itemWithIndex.globalIndex;
 
       card.innerHTML = `
-        <img src="${item.src}" alt="${item.alt}" loading="lazy" />
+        <img src="${item.src}" alt="${item.alt}" />
         <div class="gallery-card-overlay">
           <span class="gallery-item-tag">${item.tag}</span>
           <h4 class="gallery-item-title">${item.title}</h4>
