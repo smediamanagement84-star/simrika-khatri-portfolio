@@ -52,7 +52,7 @@ const PORTFOLIO_DATA = {
       },
       facebook: {
         handle: "Simrika khatri",
-        url: "https://www.facebook.com/search/top?q=Simrika%20khatri"
+        url: "https://www.facebook.com/public/Simrika-Khatri"
       },
       email: {
         address: "simrikakhatri29@gmail.com",

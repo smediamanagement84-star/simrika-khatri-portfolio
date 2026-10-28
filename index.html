@@ -101,7 +101,16 @@
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </a>
-              <button class="btn-secondary btn-open-qr">
+              <button class="btn-secondary btn-open-qr" title="Open Mobile QR Code">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                  <rect x="7" y="7" width="1" height="1"></rect>
+                  <rect x="16" y="7" width="1" height="1"></rect>
+                  <rect x="7" y="16" width="1" height="1"></rect>
+                </svg>
                 <span>Share QR Code</span>
               </button>
               <a href="#contact" class="btn-secondary">
@@ -257,38 +266,57 @@
               <img src="assets/images/hero/compcard_hero.jpg" alt="Simrika Khatri Comp Card Photo">
             </div>
 
-            <div class="compcard-stats-table">
-              <div class="spec-cell">
-                <span class="spec-label">Height</span>
-                <span class="spec-val" id="statHeightVal">5'3"</span>
+            <div class="compcard-details-column">
+              <div class="compcard-stats-table">
+                <div class="spec-cell">
+                  <span class="spec-label">Height</span>
+                  <span class="spec-val" id="statHeightVal">5'3"</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Hair Color</span>
+                  <span class="spec-val">Brown</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Eye Color</span>
+                  <span class="spec-val">Black</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Bust / Chest</span>
+                  <span class="spec-val" id="statBustVal">32"</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Waist</span>
+                  <span class="spec-val" id="statWaistVal">25"</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Hips</span>
+                  <span class="spec-val" id="statHipsVal">34"</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Shoe Size</span>
+                  <span class="spec-val" id="statShoeVal">6.5 US</span>
+                </div>
+                <div class="spec-cell">
+                  <span class="spec-label">Dress Size</span>
+                  <span class="spec-val">XS / S</span>
+                </div>
               </div>
-              <div class="spec-cell">
-                <span class="spec-label">Hair Color</span>
-                <span class="spec-val">Brown</span>
-              </div>
-              <div class="spec-cell">
-                <span class="spec-label">Eye Color</span>
-                <span class="spec-val">Black</span>
-              </div>
-              <div class="spec-cell">
-                <span class="spec-label">Bust / Chest</span>
-                <span class="spec-val" id="statBustVal">32"</span>
-              </div>
-              <div class="spec-cell">
-                <span class="spec-label">Waist</span>
-                <span class="spec-val" id="statWaistVal">25"</span>
-              </div>
-              <div class="spec-cell">
-                <span class="spec-label">Hips</span>
-                <span class="spec-val" id="statHipsVal">34"</span>
-              </div>
-              <div class="spec-cell">
-                <span class="spec-label">Shoe Size</span>
-                <span class="spec-val" id="statShoeVal">6.5 US</span>
-              </div>
-              <div class="spec-cell">
-                <span class="spec-label">Dress Size</span>
-                <span class="spec-val">XS / S</span>
+
+              <!-- Official Comp Card Embedded QR -->
+              <div class="compcard-qr-banner">
+                <div class="compcard-qr-code-wrap btn-open-qr" title="Click to enlarge QR Code">
+                  <img src="assets/images/qr_simrika_portfolio.png" alt="Scan QR Code for Simrika Khatri Portfolio" class="compcard-qr-image">
+                  <div class="qr-scan-pulse"></div>
+                </div>
+                <div class="compcard-qr-details">
+                  <div class="compcard-qr-tag">✦ OFFICIAL COMP CARD QR</div>
+                  <h4 class="compcard-qr-headline">Scan for Live Portfolio & Video Reels</h4>
+                  <p class="compcard-qr-caption">Instant phone camera access to verified measurements, high-res runway galleries, and direct casting availability.</p>
+                  <div class="compcard-qr-meta">
+                    <span class="compcard-qr-url">simrika-portfolio.netlify.app</span>
+                    <button class="btn-qr-mini btn-open-qr" type="button">Enlarge QR</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -340,7 +368,7 @@
         </div>
 
         <!-- Section 2: Runways, Pageants & Expos -->
-        <div class="gallery-section-block active" id="section-runway" style="margin-top: 60px;">
+        <div class="gallery-section-block active" id="section-runway">
           <div class="gallery-section-intro">
             <h3 class="gallery-section-title">Runways, Pageants & Stage Expos</h3>
             <p class="gallery-section-sub">Pageant titleholder crowning moments, grand finale ramp walks, and designer showcases.</p>
@@ -349,7 +377,7 @@
         </div>
 
         <!-- Section 3: Hosting, Judging & Choreography -->
-        <div class="gallery-section-block active" id="section-hosting" style="margin-top: 60px;">
+        <div class="gallery-section-block active" id="section-hosting">
           <div class="gallery-section-intro">
             <h3 class="gallery-section-title">Hosting, Judging & Choreography</h3>
             <p class="gallery-section-sub">Live stage emcee hosting, pageant jury evaluations, and choreography direction.</p>
@@ -400,7 +428,7 @@
                 </a>
 
                 <!-- Facebook -->
-                <a href="https://www.facebook.com/search/top?q=Simrika%20khatri" target="_blank" rel="noopener" class="contact-link-item">
+                <a href="https://www.facebook.com/public/Simrika-Khatri" target="_blank" rel="noopener" class="contact-link-item">
                   <div class="contact-item-icon">📘</div>
                   <div class="contact-item-info">
                     <span class="contact-item-label">Facebook</span>
@@ -419,10 +447,24 @@
               </div>
             </div>
 
-            <div style="margin-top: 20px;">
-              <button class="btn-primary btn-open-qr" style="width: 100%; justify-content: center;">
-                <span>Scan / Share QR Code</span>
-              </button>
+            <!-- Instant Phone Scan Card -->
+            <div class="contact-qr-card">
+              <div class="contact-qr-box btn-open-qr" title="Click to view full size QR">
+                <img src="assets/images/qr_simrika_portfolio.png" alt="Simrika Khatri QR Code" class="contact-qr-img" />
+              </div>
+              <div class="contact-qr-text">
+                <span class="contact-qr-badge">📱 Instant Phone Scan</span>
+                <h4 class="contact-qr-title">Scan or Save to Mobile</h4>
+                <p class="contact-qr-desc">Scan with your smartphone camera to save contact or open live portfolio instantly.</p>
+                <div class="contact-qr-buttons">
+                  <button class="btn-primary btn-open-qr" type="button" style="font-size: 0.8rem; padding: 8px 16px;">
+                    <span>Open QR Modal</span>
+                  </button>
+                  <a href="assets/images/qr_simrika_portfolio.png" download="Simrika_Khatri_Portfolio_QR.png" class="btn-secondary" style="font-size: 0.8rem; padding: 8px 16px; text-decoration: none;">
+                    <span>Save QR</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -491,7 +533,7 @@
         <div class="footer-socials">
           <a href="https://www.instagram.com/Simrika__khatri" target="_blank" rel="noopener" class="social-pill-btn">Instagram</a>
           <a href="https://www.tiktok.com/@simrikakhatri29" target="_blank" rel="noopener" class="social-pill-btn">TikTok</a>
-          <a href="https://www.facebook.com/search/top?q=Simrika%20khatri" target="_blank" rel="noopener" class="social-pill-btn">Facebook</a>
+          <a href="https://www.facebook.com/public/Simrika-Khatri" target="_blank" rel="noopener" class="social-pill-btn">Facebook</a>
           <a href="mailto:simrikakhatri29@gmail.com" class="social-pill-btn">Email</a>
         </div>
       </div>

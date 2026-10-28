@@ -856,6 +856,143 @@ button {
   border-top: 2px solid var(--blue-pale);
 }
 
+/* Comp Card Details Column & Embedded QR */
+.compcard-details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.compcard-qr-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.95), rgba(219, 234, 254, 0.6));
+  border: 2px dashed var(--border-blue-bright);
+  border-radius: 16px;
+  padding: 16px 20px;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.compcard-qr-banner:hover {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-color: var(--blue-primary);
+  box-shadow: var(--shadow-card);
+}
+
+.compcard-qr-code-wrap {
+  width: 96px;
+  height: 96px;
+  background: #ffffff;
+  border: 2px solid var(--border-blue);
+  border-radius: 12px;
+  padding: 6px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+  transition: var(--transition-bounce);
+}
+
+.compcard-qr-code-wrap:hover {
+  transform: scale(1.06);
+  border-color: var(--blue-primary);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.compcard-qr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.qr-scan-pulse {
+  position: absolute;
+  inset: -4px;
+  border-radius: 14px;
+  border: 2px solid var(--blue-bright);
+  opacity: 0;
+  pointer-events: none;
+  animation: qrPulse 2.5s infinite;
+}
+
+@keyframes qrPulse {
+  0% { transform: scale(0.96); opacity: 0.8; }
+  50% { transform: scale(1.06); opacity: 0; }
+  100% { transform: scale(0.96); opacity: 0; }
+}
+
+.compcard-qr-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.compcard-qr-tag {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  color: var(--blue-primary);
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.compcard-qr-headline {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 800;
+  color: var(--blue-deep);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.compcard-qr-caption {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.compcard-qr-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.compcard-qr-url {
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--blue-primary);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.btn-qr-mini {
+  background: var(--blue-primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-qr-mini:hover {
+  background: var(--blue-deep);
+  transform: translateY(-1px);
+}
+
 /* ==============================================================================
    PORTFOLIO GALLERIES
    ============================================================================== */
@@ -904,6 +1041,10 @@ button {
 
 .gallery-section-block.active {
   display: block;
+}
+
+.gallery-section-block.active + .gallery-section-block.active {
+  margin-top: 60px;
 }
 
 @keyframes fadeIn {
@@ -1112,6 +1253,90 @@ button {
   font-size: 0.98rem;
   font-weight: 700;
   color: var(--blue-deep);
+}
+
+/* Contact QR Card */
+.contact-qr-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  background: linear-gradient(135deg, rgba(239, 246, 255, 0.9), rgba(255, 255, 255, 0.9));
+  border: 2px dashed var(--border-blue-bright);
+  border-radius: 16px;
+  margin-top: 20px;
+  transition: var(--transition-smooth);
+}
+
+.contact-qr-card:hover {
+  border-color: var(--blue-primary);
+  box-shadow: var(--shadow-card);
+}
+
+.contact-qr-box {
+  width: 90px;
+  height: 90px;
+  background: #ffffff;
+  border: 2px solid var(--border-blue);
+  border-radius: 12px;
+  padding: 6px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-bounce);
+}
+
+.contact-qr-box:hover {
+  transform: scale(1.08);
+  border-color: var(--blue-primary);
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+}
+
+.contact-qr-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.contact-qr-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-qr-badge {
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.contact-qr-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--blue-deep);
+  margin-bottom: 4px;
+}
+
+.contact-qr-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.contact-qr-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 /* Booking Quick Form */
@@ -1395,22 +1620,54 @@ button {
    PRINT STYLES FOR COMP CARD
    ============================================================================== */
 @media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
   body {
     background: #ffffff !important;
     color: #000000 !important;
   }
-  .site-header, .gallery-nav-tabs, .contact-grid, .site-footer, .btn-qr-trigger, .modal-overlay, .hero-cta-group, .ambient-glow, .ambient-glow-bottom {
+  .site-header,
+  .mobile-nav-drawer,
+  .hero-section,
+  #about,
+  #portfolio,
+  #contact,
+  .site-footer,
+  .ambient-glow,
+  .ambient-glow-bottom,
+  .compcard-actions,
+  .compcard-units-toggle,
+  .modal-overlay,
+  .lightbox-modal,
+  .btn-qr-mini,
+  .qr-scan-pulse {
     display: none !important;
+  }
+  #compcard {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .section-header {
+    margin-bottom: 16px !important;
   }
   .compcard-wrapper {
     background: #ffffff !important;
-    border: 2px solid #000000 !important;
+    border: 2px solid #1a3a6b !important;
     color: #000000 !important;
     box-shadow: none !important;
+    padding: 24px !important;
+    page-break-inside: avoid;
   }
   .compcard-model-name, .spec-val {
-    color: #000000 !important;
-    -webkit-text-fill-color: #000000 !important;
+    color: #1a3a6b !important;
+    -webkit-text-fill-color: #1a3a6b !important;
+  }
+  .compcard-qr-banner {
+    display: flex !important;
+    border: 1px solid #1a3a6b !important;
+    background: #f8fafc !important;
   }
 }
 
@@ -1466,5 +1723,13 @@ button {
   }
   .contact-grid {
     gap: 24px;
+  }
+  .compcard-qr-banner, .contact-qr-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .compcard-qr-meta, .contact-qr-buttons {
+    justify-content: center;
   }
 }

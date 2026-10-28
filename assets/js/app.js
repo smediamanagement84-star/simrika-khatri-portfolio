@@ -216,46 +216,64 @@ function initQRModal() {
 
   if (!qrModal || !qrTarget) return;
 
-  // Determine URL to encode (fallback to clean live URL if local)
-  let currentShareUrl = window.location.href;
-  if (currentShareUrl.startsWith('file://')) {
-    currentShareUrl = "https://simrika-portfolio.netlify.app";
+  // Determine URL to encode (fallback to clean live URL if local or preview)
+  const LIVE_PORTFOLIO_URL = "https://simrika-portfolio.netlify.app";
+  let currentShareUrl = LIVE_PORTFOLIO_URL;
+  if (window.location.hostname && 
+      !window.location.hostname.includes('localhost') && 
+      !window.location.hostname.includes('127.0.0.1') && 
+      window.location.protocol !== 'file:') {
+    currentShareUrl = window.location.origin + window.location.pathname;
   }
 
   if (qrUrlInput) {
     qrUrlInput.value = currentShareUrl;
     qrUrlInput.addEventListener('input', (e) => {
-      updateQRCode(e.target.value);
+      updateQRCode(e.target.value.trim() || LIVE_PORTFOLIO_URL);
     });
   }
 
   function renderQR(url) {
     qrTarget.innerHTML = '';
     if (window.QRCode) {
-      qrCodeInstance = new QRCode(qrTarget, {
-        text: url,
-        width: 220,
-        height: 220,
-        colorDark: "#0b0b0d",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.H
-      });
+      try {
+        qrCodeInstance = new QRCode(qrTarget, {
+          text: url || currentShareUrl,
+          width: 220,
+          height: 220,
+          colorDark: "#0b0b0d",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.M
+        });
+      } catch (err) {
+        console.warn('QR generation fallback:', err);
+        // Fallback: render the pre-rendered high-res QR image
+        qrTarget.innerHTML = `<img src="assets/images/qr_simrika_portfolio.png" alt="Simrika Khatri QR Code" style="width:220px;height:220px;object-fit:contain;" />`;
+      }
     }
   }
 
   function updateQRCode(url) {
     if (qrCodeInstance) {
-      qrCodeInstance.makeCode(url);
+      try {
+        qrCodeInstance.makeCode(url);
+      } catch (e) {
+        renderQR(url);
+      }
     } else {
       renderQR(url);
     }
   }
 
+  // Pre-render QR so it is immediately visible upon open
+  renderQR(currentShareUrl);
+
   openBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
       qrModal.classList.add('active');
-      const targetUrl = qrUrlInput ? qrUrlInput.value : currentShareUrl;
-      renderQR(targetUrl);
+      const targetUrl = qrUrlInput ? qrUrlInput.value.trim() : currentShareUrl;
+      updateQRCode(targetUrl || currentShareUrl);
     });
   });
 
