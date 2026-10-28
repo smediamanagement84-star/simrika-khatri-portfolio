@@ -216,10 +216,10 @@ function initQRModal() {
 
   if (!qrModal || !qrTarget) return;
 
-  // Determine URL to encode (fallback to github pages link pattern if local)
+  // Determine URL to encode (fallback to clean live URL if local)
   let currentShareUrl = window.location.href;
   if (currentShareUrl.startsWith('file://')) {
-    currentShareUrl = "https://smediamanagement84-star.github.io/simrika-khatri-portfolio/";
+    currentShareUrl = "https://simrika-portfolio.netlify.app";
   }
 
   if (qrUrlInput) {
